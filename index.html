@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Core Primary Meta Tags -->
+<title>Hridoy Hossen — Engineering Trust • Securing Tomorrow</title>
+<!-- favicon -->
+<link rel="icon" href="assets/picture.jpg" type="image/x-icon">
+<meta name="title" content="Hridoy Hossen — Engineering Trust • Securing Tomorrow">
+<meta name="description" content="Digital Services Freelancer specializing in security audits, secure backend/API development, and cloud infrastructure. Available for hire.">
+<meta name="keywords" content="Hridoy Hossen, Security Audits, Backend API, Cloud Infrastructure, Freelancer Dhaka, Cybersecurity Specialist, Web Developer">
+<meta name="author" content="Hridoy Hossen">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hridoyhosen.roovix.com/">
+
+<!-- Open Graph / Facebook / LinkedIn / Messaging Apps -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hridoyhosen.roovix.com/">
+<meta property="og:title" content="Hridoy Hossen — Engineering Trust • Securing Tomorrow">
+<meta property="og:description" content="Digital Services Freelancer specializing in Security Audits, Backend API Development, and Cloud Infrastructure. Check out my services and portfolio.">
+<meta property="og:image" content="https://hridoyhosen.roovix.com/assets/picture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Hridoy Hossen Portfolio">
+
+<!-- Twitter Card Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hridoyhosen.roovix.com/">
+<meta name="twitter:title" content="Hridoy Hossen — Engineering Trust • Securing Tomorrow">
+<meta name="twitter:description" content="Digital Services Freelancer specializing in Security Audits, Backend API Development, and Cloud Infrastructure. Check out my services and portfolio.">
+<meta name="twitter:image" content="https://hridoyhosen.roovix.com/assets/picture.jpg">
+
+<!-- JSON-LD Structured Data for Google Rich Snippets -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hridoy Hossen",
+  "url": "https://hridoyhosen.roovix.com/",
+  "image": "https://hridoyhosen.roovix.com/assets/picture.jpg",
+  "jobTitle": "Digital Services Freelancer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelance"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dhaka",
+    "addressCountry": "Bangladesh"
+  },
+  "knowsAbout": ["Security audits", "Backend & API", "Cloud infrastructure", "DevOps"],
+  "sameAs": [
+    "https://facebook.com/yourpage"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1A1410;
+    --paper: #FDF9F3;
+    --panel: #FFFFFF;
+    --line: #F0E3D6;
+    --accent: #F5A623;
+    --accent-deep: #E08E1B;
+    --accent-soft: #FFF3E2;
+    --gold: #C98A1E;
+    
+    /* Earthy Natural Green Variants */
+    --green: #228B22;      
+    --green-deep: #2D442A; 
+    --green-soft: #EEF4EC; 
+    
+    --muted: #6B5E52;
+    --radius: 16px;
+
+    --float-bottom: 28px;
+    --float-right: 28px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  h1,h2,h3{font-family:'Inter',sans-serif; font-weight:600; letter-spacing:-0.01em;}
+
+  a{color:inherit;}
+  button{font-family:inherit;}
+
+  .wrap{
+    max-width:900px;
+    margin:0 auto;
+    padding:0 24px;
+    width:100%;
+  }
+
+  /* ---------- Profile header ---------- */
+  .profile-bar{position:relative; padding-top:48px;}
+  .profile-bar .wrap{
+    display:flex;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    gap:22px;
+  }
+  .avatar{
+    flex:0 0 auto;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    overflow:hidden;
+    border:4px solid var(--panel);
+    box-shadow:0 6px 20px rgba(77, 245, 35, 0.151);
+    background:#2C2018;
+    order:1;
+  }
+  .avatar img{width:100%; height:100%; object-fit:cover; display:block;}
+  .identity{flex:1 1 auto; padding-bottom:6px; order:2;}
+  
+  .name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .identity h1{margin:0; font-size:28px; color:var(--ink); font-weight:600;}
+  
+  /* Inline Share Button Style */
+  .share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--muted);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(26,20,16,0.04);
+  }
+  .share-btn:hover {
+    background: var(--accent-soft);
+    color: var(--accent-deep);
+    border-color: var(--accent);
+  }
+  .share-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+  }
+
+  /* Toast message for fallback link copying */
+  .share-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--ink);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(.22,.61,.36,1);
+    z-index: 2000;
+  }
+  .share-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .tagline{
+    margin:0 0 12px;
+    color:var(--muted);
+    font-weight:600;
+    font-size:14.5px;
+    letter-spacing:0.02em;
+  }
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:12.5px;
+    color:var(--muted);
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:6px 13px;
+    border-radius:999px;
+    box-shadow:0 2px 6px rgba(26,20,16,0.03);
+    white-space:nowrap;
+  }
+  .pill.available::before{
+    content:'';
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--green);
+    display:inline-block;
+    box-shadow:0 0 0 4px rgba(19, 165, 0, 0.219);
+  }
+  .contact-cta{
+    flex:0 0 auto;
+    padding-bottom:6px;
+    order:3;
+    position:relative;
+    margin-right:45px;
+    margin-top: 10px;
+  }
+
+  /* ---------- Chat button ---------- */
+  .chat-ghost{
+    display:inline-block;
+    visibility:hidden;
+    padding:12px 24px 12px 20px;
+    font-weight:600;
+    font-size:14.5px;
+    border-radius:50px;
+    white-space:nowrap;
+    pointer-events:none;
+  }
+
+  .smart-chat{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:linear-gradient(135deg, #000 0%, var(--accent-deep) 45%, #c97a12a4 100%);
+    color:#fff;
+    text-decoration:none;
+    padding:12px 24px 12px 20px;
+    border-radius:50px;
+    font-weight:600;
+    font-size:14.5px;
+    box-shadow:0 4px 14px rgba(245,166,35,0.28);
+
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    white-space:nowrap;
+
+    transition:
+      top 0.55s cubic-bezier(.22,.61,.36,1),
+      left 0.55s cubic-bezier(.22,.61,.36,1),
+      background 0.5s cubic-bezier(.22,.61,.36,1),
+      padding 0.5s cubic-bezier(.22,.61,.36,1),
+      border-radius 0.5s cubic-bezier(.22,.61,.36,1),
+      box-shadow 0.6s cubic-bezier(.22,.61,.36,1),
+      transform 0.4s cubic-bezier(.22,.61,.36,1);
+
+    animation:chatPulse 3.2s ease-in-out infinite;
+    will-change: top, left, transform, box-shadow;
+    isolation:isolate;
+  }
+
+  .smart-chat:hover{
+    transform:translateY(-2px) scale(1.02);
+    box-shadow:0 12px 28px rgba(60, 245, 35, 0.35), 0 0 0 1px rgba(255,255,255,0.2);
+  }
+  .smart-chat:focus-visible{outline:3px solid var(--gold); outline-offset:3px;}
+
+  .smart-chat svg{
+    width:18px; height:18px; flex:0 0 auto;
+    stroke:#fff;
+    position:relative; z-index:2;
+    transition: stroke 0.3s ease;
+  }
+  .smart-chat .label{position:relative; z-index:2;}
+
+  .smart-chat.floating{
+    background:linear-gradient(135deg, #000 0%, var(--accent-deep) 45%, #c97a12a4 100%);
+    padding:16px 24px 16px 20px;
+    border-radius:999px;
+    box-shadow:0 12px 36px rgba(245,166,35,0.45);
+  }
+
+  /* water wave animation on hover */
+  .smart-chat::before,
+  .smart-chat::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:inherit;
+    z-index:0;
+    pointer-events:none;
+    opacity:0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.25) 0%, transparent 70%);
+  }
+  .smart-chat::before{
+    background: radial-gradient(circle at 70% 60%, rgba(255,255,255,0.2) 0%, transparent 70%);
+    transition-delay: 0.05s;
+  }
+
+  .smart-chat:hover::before{
+    opacity:1;
+    animation: waterRipple 1.8s ease-out infinite;
+  }
+  .smart-chat:hover::after{
+    opacity:1;
+    animation: waterRipple 2.2s ease-out 0.3s infinite;
+  }
+
+  @keyframes waterRipple{
+    0%   { transform: scale(0.8) rotate(0deg); opacity:0.6; }
+    50%  { transform: scale(1.4) rotate(5deg); opacity:0.2; }
+    100% { transform: scale(1.9) rotate(10deg); opacity:0; }
+  }
+
+  @keyframes chatPulse{
+    0%   { box-shadow:0 4px 14px rgba(245,166,35,0.28), 0 0 0 0 rgba(245,166,35,0.5); }
+    50%  { box-shadow:0 8px 28px rgba(245,166,35,0.55), 0 0 0 18px rgba(245,166,35,0); }
+    100% { box-shadow:0 4px 14px rgba(245,166,35,0.28), 0 0 0 0 rgba(245,166,35,0); }
+  }
+  .smart-chat.floating{
+    animation:chatPulseFloat 3.2s ease-in-out infinite;
+  }
+  @keyframes chatPulseFloat{
+    0%   { box-shadow:0 12px 36px rgba(245,166,35,0.55), 0 0 0 0 rgba(245,166,35,0.6); }
+    50%  { box-shadow:0 18px 48px rgba(245,166,35,0.7), 0 0 0 22px rgba(245,166,35,0); }
+    100% { box-shadow:0 12px 36px rgba(245,166,35,0.55), 0 0 0 0 rgba(245,166,35,0); }
+  }
+
+  /* ---------- services button ---------- */
+  .btn.small{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    background: #000;
+    color:#fff;
+    border:none;
+    border-radius:50px;
+    font-weight:600;
+    font-size:13px;
+    padding:9px 16px;
+    width:100%;
+    margin-top:6px;
+    cursor:pointer;
+    box-shadow:0 4px 14px rgba(245,166,35,0.25);
+  }
+  .btn.small.active {
+    background:linear-gradient(135deg, #000 0%, var(--accent-deep) 45%, #c97a12a4 100%);
+    box-shadow:0 8px 22px rgba(245,166,35,0.45);
+    animation:chatPulseFloat 3.2s ease-in-out infinite;
+  }
+  .btn.small:hover{
+    background:linear-gradient(135deg, #000 0%, var(--accent-deep) 45%, #c97a12a4 100%);
+    box-shadow:0 8px 22px rgba(245,166,35,0.45);
+    animation:chatPulseFloat 3.2s ease-in-out infinite;
+  }
+
+  main{margin-top:6px; flex:1;}
+
+  section{padding:38px 0; border-top:1px solid var(--line);}
+  section.about{border-top:none; padding-top:28px;}
+  section h2{font-size:19px; margin:0 0 14px; font-weight:600;}
+  .about-body{max-width:64ch; color:#3A3028; font-size:15px;}
+  .about-body p{margin:0 0 12px;}
+  .about-body p:last-child{margin-bottom:0;}
+  .about-body ul{margin:0 0 14px; padding:0; list-style:none;}
+  .about-body li{position:relative; padding-left:22px; margin:0 0 8px;}
+  .about-body li::before{
+    content:'✓'; position:absolute; left:0;
+    color:var(--accent-deep); font-weight:700; font-size:13px; top:2px;
+  }
+  .about-body strong{color:var(--ink); font-weight:600;}
+  .about-body em{color:var(--muted); font-style:italic;}
+
+  /* ---- skills pills shown in the MIDDLE of "What I do" ---- */
+  .skills-inline{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:14px 0 16px;
+  }
+  .skills-inline span{
+    font-size:13px;
+    color:var(--ink);
+    background:var(--green-soft);
+    border:1px solid #c0f5d4;
+    color: var(--green-deep);
+    padding:7px 14px;
+    border-radius:9px;
+    font-weight:500;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .services-head{
+    display:flex; align-items:baseline; justify-content:space-between; gap:12px;
+  }
+  .services-head p{margin:0 0 14px; color:var(--muted); font-size:13.5px;}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:18px;
+  }
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 4px 16px rgba(26,20,16,0.04);
+  }
+  .card-media{height:130px; position:relative; overflow:hidden; background:#2C2018;}
+  .card-media img{width:100%; height:100%; object-fit:cover; display:block;}
+  .card-media .overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg,rgba(26,20,16,0.05) 0%,rgba(26,20,16,0.35) 100%);
+  }
+  .card-body{
+    padding:16px 18px 18px;
+    display:flex; flex-direction:column; gap:9px; flex:1;
+  }
+  .card-body h3{margin:0; font-size:15.5px; font-weight:600; line-height:1.35;}
+  .card-body p{margin:0; font-size:13px; color:var(--muted); flex:1;}
+  .card-foot{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:10px; margin-top:2px;
+  }
+  .price{font-weight:600; font-size:14.5px; color:var(--ink);}
+  .price small{font-weight:400; color:var(--muted); font-size:11.5px;}
+
+  .state-msg{color:var(--muted); font-size:13.5px; padding:14px 0;}
+
+  .project-card{
+    display:flex; flex-direction:column;
+    text-decoration:none; color:inherit; cursor:pointer;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .project-card:hover{
+    border-color:var(--accent);
+    transform:translateY(-3px);
+    box-shadow:0 12px 32px rgba(26,20,16,0.09);
+  }
+  .project-card:focus-visible{outline:3px solid var(--gold); outline-offset:2px;}
+  .project-card .card-media{position:relative;}
+  .project-card .open-mark{
+    position:absolute; top:10px; right:10px;
+    width:28px; height:28px; border-radius:50%;
+    background:rgba(255,255,255,0.22);
+    backdrop-filter:blur(4px);
+    display:flex; align-items:center; justify-content:center;
+    z-index:2;
+  }
+  .project-card .open-mark svg{width:13px; height:13px; stroke:#fff;}
+  .tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:2px;}
+  .tags span{
+    font-size:11px; color:var(--accent-deep);
+    background:var(--accent-soft);
+    border:1px solid #F5DFC0;
+    padding:3px 10px; border-radius:999px; font-weight:500;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:28px 0 44px;
+    text-align:center;
+    margin-top:auto;
+  }
+  .fine{font-size:12px; color:var(--muted); margin:0;}
+
+  /* ============================================================
+     MOBILE
+     ============================================================ */
+  @media (max-width:700px){
+    .wrap{padding:0 20px;}
+    .profile-bar{padding-top:36px;}
+    .profile-bar .wrap{
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      gap:16px;
+    }
+    .avatar{
+      width:104px; height:104px;
+      order:1;
+    }
+    .identity{
+      order:2;
+      width:100%;
+      padding-bottom:0;
+    }
+    .name-row {
+      justify-content: center;
+    }
+    .meta-row{justify-content:center;}
+    .contact-cta{
+      order:3;
+      flex:0 0 auto;
+      width:auto;
+      padding:0;
+      margin:0;
+    }
+    .chat-ghost{display:none;}
+
+    .smart-chat{
+      top:auto !important;
+      left:auto !important;
+      right:20px;
+      bottom:20px;
+      padding:14px 20px 14px 16px;
+      font-size:13.5px;
+      gap:8px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 55%, #C97A12 100%);
+      box-shadow:0 12px 36px rgba(245,166,35,0.55);
+      animation:chatPulseFloat 3.2s ease-in-out infinite;
+      transition: transform 0.2s ease;
+      max-width: calc(100vw - 40px);
+    }
+    .smart-chat:hover{
+      transform:translateY(-2px) scale(1.03);
+      box-shadow:0 16px 40px rgba(245,166,35,0.5), 0 0 0 1px rgba(255,255,255,0.15);
+    }
+    .smart-chat svg{width:16px; height:16px;}
+    .smart-chat .label{font-size:13px;}
+
+    .identity h1{font-size:25px;}
+    .tagline{font-size:13.5px;}
+    .pill{font-size:11.5px; padding:6px 12px;}
+
+    main{padding-bottom:88px;}
+  }
+
+  @media (max-width:420px){
+    .avatar{width:88px; height:88px;}
+    .identity h1{font-size:22px;}
+  }
+
+  /* ---------- scroll reveal ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(22px);
+    transition:opacity 0.7s cubic-bezier(.22,.61,.36,1), transform 0.7s cubic-bezier(.22,.61,.36,1);
+  }
+  .reveal.in-view{
+    opacity:1;
+    transform:none;
+  }
+  .reveal-item{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal-item.in-view{
+    opacity:1;
+    transform:none;
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .card, .project-card, .smart-chat{transition:none;}
+    .smart-chat, .smart-chat.floating{animation:none;}
+    .smart-chat::before,
+    .smart-chat::after{transition:none; animation:none; opacity:0 !important;}
+    .reveal, .reveal-item{opacity:1; transform:none; transition:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="profile-bar">
+  <div class="wrap">
+    <div class="avatar">
+      <img src="assets/picture.jpg" alt="Hridoy Hossen">
+    </div>
+    <div class="identity">
+      <div class="name-row">
+        <h1 id="profileName"></h1>
+        <button class="share-btn" id="shareBtn" aria-label="Share Portfolio" title="Share Portfolio">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+        </button>
+      </div>
+      <p class="tagline" id="profileTagline"></p>
+      <div class="meta-row">
+        <span class="pill available">Available for work</span>
+        <span class="pill" id="profileLocation"></span>
+        <span class="pill" id="profileRole"></span>
+      </div>
+    </div>
+    <div class="contact-cta">
+      <span class="chat-ghost" aria-hidden="true">Chat with me</span>
+      <a class="smart-chat" id="smartChat" href="#" target="_blank" rel="noopener" aria-label="Chat on Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <span class="label">Chat with me</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="about reveal">
+    <h2>About</h2>
+    <div class="about-body">
+      <div id="descriptionTop"></div>
+      <div class="skills-inline" id="skillsList"></div>
+      <div id="descriptionBottom"></div>
+    </div>
+  </section>
+
+  <section class="services reveal">
+    <div class="services-head">
+      <h2>Services</h2>
+    </div>
+    <p style="margin:-8px 0 14px;color:var(--muted);font-size:13.5px;">Live packages, pulled from my services catalog.</p>
+    <div id="servicesGrid" class="grid" aria-live="polite"></div>
+  </section>
+
+  <section class="projects reveal">
+    <div class="services-head">
+      <h2>Projects</h2>
+    </div>
+    <p style="margin:-8px 0 14px;color:var(--muted);font-size:13.5px;">A few things I've shipped. Click any card to open it.</p>
+    <div id="projectsGrid" class="grid" aria-live="polite"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="fine"><span id="footerName"></span>. Services delivered with care.</p>
+  </div>
+</footer>
+
+<div class="share-toast" id="shareToast">Link copied to clipboard!</div>
+
+<script>
+  const CONFIG = {
+    profile: {
+      name: "Hridoy Hossen",
+      initials: "HH",
+      tagline: "Engineering Trust • Securing Tomorrow",
+      location: "Dhaka, Bangladesh",
+      role: "Digital Services Freelancer",
+      facebook: "https://facebook.com/yourpage",
+      descriptionTop:
+`I'm a digital services freelancer focused on building secure, reliable systems for clients who can't afford to get it wrong.
+
+**What I do:**`,
+      descriptionBottom:
+`I care about doing things properly the *first* time — clean architecture, honest timelines, and clear communication from the first message to final delivery.`
+    },
+    skills: [
+      "Security audits",
+      "Backend & API",
+      "Cloud infrastructure"
+    ],
+    currency: { symbol: "$", code: "USD" },
+    api: {
+      servicesUrl: "https://your-server.example.com/api/services",
+      projectsUrl: "https://your-server.example.com/api/projects"
+    },
+    local: {
+      services: [
+        { title: "Security Audit — Web App", description: "A full review of your app's attack surface with a clear, prioritized fix list.", price: 120, unit: "starting at", link: "https://facebook.com/yourpage", image: "assets/services/security-audit.jpg" },
+        { title: "Secure API Development", description: "REST API built with authentication, rate limiting, and input validation from day one.", price: 180, unit: "starting at", link: "https://facebook.com/yourpage", image: "assets/services/api-dev.jpg" },
+        { title: "Cloud Infrastructure Setup", description: "Production-ready server setup with monitoring, backups, and hardened access.", price: 150, unit: "starting at", link: "https://facebook.com/yourpage", image: "assets/services/cloud-infra.jpg" }
+      ],
+      projects: [
+        { title: "Fintech API Hardening", description: "Rebuilt authentication and rate limiting for a payments API ahead of a security review.", tags: ["Security", "Node.js"], link: "https://github.com/yourusername/fintech-api-hardening", image: "assets/projects/fintech.jpg" },
+        { title: "Client Portal Infrastructure", description: "Zero-downtime server migration with automated backups and uptime monitoring.", tags: ["Cloud", "DevOps"], link: "https://github.com/yourusername/client-portal-infra", image: "assets/projects/client-portal.jpg" },
+        { title: "E-commerce Backend", description: "Order and inventory API serving a mid-size storefront, load-tested to 500 req/s.", tags: ["API", "PostgreSQL"], link: "https://github.com/yourusername/ecommerce-backend", image: "assets/projects/ecommerce.jpg" }
+      ]
+    }
+  };
+
+  function escapeHTML(str){
+    return String(str).replace(/[&<>"']/g, s => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    }[s]));
+  }
+  function inlineFormat(str){
+    return escapeHTML(str)
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>');
+  }
+  function formatDescription(text){
+    const blocks = String(text).trim().split(/\n\s*\n/);
+    return blocks.map(block => {
+      const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
+      const isList = lines.length && lines.every(l => l.startsWith('- '));
+      if(isList){
+        return '<ul>' + lines.map(l => `<li>${inlineFormat(l.slice(2))}</li>`).join('') + '</ul>';
+      }
+      return `<p>${lines.map(inlineFormat).join('<br>')}</p>`;
+    }).join('');
+  }
+
+  function renderProfile(){
+    const p = CONFIG.profile;
+    document.getElementById('profileName').textContent = p.name;
+    document.getElementById('profileTagline').textContent = p.tagline;
+    document.getElementById('profileLocation').textContent = p.location;
+    document.getElementById('profileRole').textContent = p.role;
+    document.getElementById('footerName').textContent = p.name;
+
+    document.getElementById('descriptionTop').innerHTML    = formatDescription(p.descriptionTop);
+    document.getElementById('descriptionBottom').innerHTML = formatDescription(p.descriptionBottom);
+
+    document.getElementById('skillsList').innerHTML =
+      CONFIG.skills.map(s => `<span>${escapeHTML(s)}</span>`).join('');
+
+    document.getElementById('smartChat').href = p.facebook;
+  }
+
+  function initShareButton() {
+    const btn = document.getElementById('shareBtn');
+    const toast = document.getElementById('shareToast');
+    if (!btn) return;
+
+    btn.addEventListener('click', async () => {
+      const shareData = {
+        title: `${CONFIG.profile.name} — Portfolio`,
+        text: `${CONFIG.profile.name} | ${CONFIG.profile.tagline}\nSkills: ${CONFIG.skills.join(', ')}`,
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+        } catch (err) {
+          if (err.name !== 'AbortError') console.error('Share error:', err);
+        }
+      } else {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 2500);
+        } catch (err) {
+          alert('Copy this link to share: ' + window.location.href);
+        }
+      }
+    });
+  }
+
+  function formatPrice(price, currency){
+    const c = currency || CONFIG.currency;
+    return `${c.symbol}${price}`;
+  }
+
+  function renderServices(services, currency){
+    const grid = document.getElementById('servicesGrid');
+    if(!services || services.length === 0){
+      grid.innerHTML = `<div class="state-msg">No services listed yet — check back soon.</div>`;
+      return;
+    }
+    grid.innerHTML = services.map(s => `
+      <article class="card reveal-item">
+        <div class="card-media">
+          <img src="${escapeHTML(s.image || 'assets/services/placeholder.jpg')}" alt="${escapeHTML(s.title || 'Service')}" loading="lazy">
+          <div class="overlay"></div>
+        </div>
+        <div class="card-body">
+          <h3>${escapeHTML(s.title || "Untitled service")}</h3>
+          <p>${escapeHTML(s.description || "")}</p>
+          <div class="card-foot">
+            <span class="price">${escapeHTML(formatPrice(s.price, currency))}${s.unit ? ` <small>${escapeHTML(s.unit)}</small>` : ""}</span>
+          </div>
+          <button class="btn small" data-link="${escapeHTML(s.link || CONFIG.profile.facebook)}">Buy / Contact</button>
+        </div>
+      </article>
+    `).join('');
+
+    grid.querySelectorAll('[data-link]').forEach(btn=>{
+      btn.addEventListener('click', () => window.open(btn.getAttribute('data-link'), '_blank', 'noopener'));
+    });
+  }
+
+  const openIcon = `<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>`;
+
+  function renderProjects(projects){
+    const grid = document.getElementById('projectsGrid');
+    if(!projects || projects.length === 0){
+      grid.innerHTML = `<div class="state-msg">No projects listed yet — check back soon.</div>`;
+      return;
+    }
+    grid.innerHTML = projects.map(pr => `
+      <a class="card project-card reveal-item" href="${escapeHTML(pr.link || '#')}" target="_blank" rel="noopener">
+        <div class="card-media">
+          <img src="${escapeHTML(pr.image || 'assets/projects/placeholder.jpg')}" alt="${escapeHTML(pr.title || 'Project')}" loading="lazy">
+          <div class="overlay"></div>
+          <span class="open-mark">${openIcon}</span>
+        </div>
+        <div class="card-body">
+          <h3>${escapeHTML(pr.title || "Untitled project")}</h3>
+          <p>${escapeHTML(pr.description || "")}</p>
+          ${pr.tags && pr.tags.length ? `<div class="tags">${pr.tags.map(t => `<span>${escapeHTML(t)}</span>`).join('')}</div>` : ''}
+        </div>
+      </a>
+    `).join('');
+  }
+
+  function initSmartChat(){
+    const chatBtn = document.getElementById('smartChat');
+    const ghost   = document.querySelector('.chat-ghost');
+    if(!chatBtn || !ghost) return;
+
+    const MQ_MOBILE = window.matchMedia('(max-width: 700px)');
+    const FLOAT_MARGIN = 28;
+
+    const cs = getComputedStyle(document.documentElement);
+    const floatBottom = parseInt(cs.getPropertyValue('--float-bottom')) || FLOAT_MARGIN;
+    const floatRight  = parseInt(cs.getPropertyValue('--float-right'))  || FLOAT_MARGIN;
+
+    let isFloating = false;
+    let raf = null;
+
+    function place(){
+      if (MQ_MOBILE.matches){
+        chatBtn.style.left = '';
+        chatBtn.style.top  = '';
+        chatBtn.classList.add('floating');
+        isFloating = true;
+        return;
+      }
+
+      const ghostRect = ghost.getBoundingClientRect();
+      const btnRect   = chatBtn.getBoundingClientRect();
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+
+      const inlineX = ghostRect.left;
+      const inlineY = ghostRect.top;
+
+      const floatX = vw - btnRect.width - floatRight;
+      const floatY = vh - btnRect.height - floatBottom;
+
+      const shouldFloat = ghostRect.bottom < 0;
+
+      if (shouldFloat !== isFloating){
+        isFloating = shouldFloat;
+        chatBtn.classList.toggle('floating', isFloating);
+      }
+
+      chatBtn.style.left = (isFloating ? floatX : inlineX) + 'px';
+      chatBtn.style.top  = (isFloating ? floatY : inlineY) + 'px';
+    }
+
+    function schedule(){
+      if(raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = null;
+        place();
+      });
+    }
+
+    const onMQChange = () => {
+      isFloating = false;
+      chatBtn.classList.remove('floating');
+      schedule();
+      setTimeout(schedule, 50);
+    };
+    if (MQ_MOBILE.addEventListener) MQ_MOBILE.addEventListener('change', onMQChange);
+    else MQ_MOBILE.addListener(onMQChange);
+
+    window.addEventListener('scroll', schedule, { passive:true });
+    window.addEventListener('resize', schedule, { passive:true });
+
+    place();
+    window.addEventListener('load', place);
+    setTimeout(place, 100);
+    setTimeout(place, 400);
+  }
+
+  function initScrollReveal(){
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const sections = document.querySelectorAll('.reveal');
+
+    if(prefersReduced || !('IntersectionObserver' in window)){
+      sections.forEach(el => el.classList.add('in-view'));
+      document.querySelectorAll('.reveal-item').forEach(el => el.classList.add('in-view'));
+      return;
+    }
+
+    const sectionObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        const section = entry.target;
+        section.classList.add('in-view');
+
+        const items = section.querySelectorAll('.reveal-item');
+        items.forEach((item, i) => {
+          setTimeout(() => item.classList.add('in-view'), i * 70);
+        });
+
+        obs.unobserve(section);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    sections.forEach(el => sectionObserver.observe(el));
+  }
+
+  function init(){
+    renderProfile();
+    initShareButton();
+    renderServices(CONFIG.local.services, CONFIG.currency);
+    renderProjects(CONFIG.local.projects);
+    initSmartChat();
+    initScrollReveal();
+    loadFromServer();
+  }
+
+  async function loadFromServer(){
+    try{
+      const res = await fetch(CONFIG.api.servicesUrl, { headers: { 'Accept': 'application/json' } });
+      if(res.ok){
+        const data = await res.json();
+        const services = Array.isArray(data) ? data : (data.services || []);
+        const currency = (!Array.isArray(data) && data.currency) ? data.currency : CONFIG.currency;
+        if(services.length) renderServices(services, currency);
+      }
+    }catch(err){}
+
+    try{
+      const res = await fetch(CONFIG.api.projectsUrl, { headers: { 'Accept': 'application/json' } });
+      if(res.ok){
+        const data = await res.json();
+        const projects = Array.isArray(data) ? data : (data.projects || []);
+        if(projects.length) renderProjects(projects);
+      }
+    }catch(err){}
+  }
+
+  init();
+</script>
+
+</body>
+</html>
